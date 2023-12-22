@@ -1,0 +1,119 @@
+/* ANIMATIONS */
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+/* LINK ANIMATION */
+.link {
+  /* RESET */
+  font-size: 2rem;
+  font-weight: 100;
+  text-decoration: none;
+  line-height: 1;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 5px 10px;
+  overflow: hidden;
+  color: #F5F5F5;
+  vertical-align: bottom;
+  transition: color 0.3s ease-out;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(100% - 2px));
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(270deg, rgb(86, 0, 144) 0%, rgb(158, 1, 123) 20%, rgb(212, 1, 104) 40%, rgb(236, 67, 80) 60%, rgb(255, 124, 63) 80%, rgb(252, 175, 60) 100%);
+  transition: transform 0.25s ease-out;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.link:hover {
+  color: #222022;
+}
+
+.link:hover::before {
+  transform: translateY(0);
+  transition: transform 0.25s ease-out;
+}
+
+.link:active {
+  color: white;
+  font-weight: 100;
+  transition: color 0s, font-weight 0s;
+}/*# sourceMappingURL=animations.css.map */
