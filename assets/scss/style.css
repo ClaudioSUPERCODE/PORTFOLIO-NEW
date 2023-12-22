@@ -174,7 +174,7 @@ span {
 }
 
 .topic {
-  width: 50%;
+  width: 100%;
   margin: 0 0 10rem 10rem;
   background-image: linear-gradient(270deg, rgb(86, 0, 144) 0%, rgb(158, 1, 123) 20%, rgb(212, 1, 104) 40%, rgb(236, 67, 80) 60%, rgb(255, 124, 63) 80%, rgb(252, 175, 60) 100%);
   background-size: cover;
@@ -447,67 +447,214 @@ footer {
   html {
     font-size: 31.25%;
   }
+  .linkContainer a {
+    display: none;
+  }
   .welcome {
     background-image: url("../pics/backWARMtop.svg");
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    width: 100vw;
   }
   .welcome .hero {
-    display: grid;
-    padding-top: 15rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    overflow: visible;
-    animation: vibrate;
-    animation-duration: 2s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
+    height: 60vh;
+    background-image: url("../pics/mobileHERO.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .welcome .hero .web3d {
-    padding-bottom: 10rem;
-    height: 33rem;
-    grid-column: 2;
-    grid-row: 1;
-    animation: slide-in-left;
-    animation-duration: 1s;
-  }
-  .welcome .hero .design3d {
-    height: 46rem;
-    grid-column: 2;
-    grid-row: 1;
-    padding-top: 5rem;
-    animation: slide-in-right;
-    animation-duration: 1s;
-    z-index: 2;
-  }
-  .welcome .hero .aleo3d {
-    width: 65rem;
-    grid-column: 2;
-    grid-row: 1;
-    padding-top: 26.5rem;
-    padding-left: 27rem;
-    animation: slide-in-bottom;
-    animation-duration: 1s;
-    z-index: 3;
-  }
-  .welcome .hero .cla {
-    height: 30rem;
-    grid-column: 2;
-    grid-row: 1;
-    padding-left: 74rem;
-    padding-top: 10rem;
-    z-index: 1;
-    animation: slide-in-top;
-    animation-duration: 1s;
+  .welcome .hero img {
+    display: none;
   }
   .welcome h1 {
-    padding: 15rem 0;
+    height: 30vh;
+    padding: 20rem 0 5rem 0;
     text-align: center;
     animation: focus-in;
     animation-duration: 1s;
-    margin-bottom: 20rem;
+    margin-bottom: 0;
+  }
+  .topic {
+    font-size: 10rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 10rem 0;
+  }
+  .aboutMeArticle .aboutContainer1 {
+    background-image: url("../pics/workflow Kopie.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    animation: slide-in-right;
+    animation-duration: 1s;
+  }
+  .aboutMeArticle .aboutContainer1 p {
+    line-height: 2;
+    text-align: center;
+    font-weight: 100;
+    width: 80%;
+  }
+  .aboutMeArticle .aboutContainer1 img {
+    display: none;
+  }
+  .aboutMeArticle .aboutContainer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10rem;
+    animation: slide-in-right;
+    animation-duration: 1s;
+    background: linear-gradient(180deg, rgb(2, 2, 2) 15%, rgb(34, 32, 34) 85%);
+  }
+  .aboutMeArticle .aboutContainer2 img {
+    animation: pulsate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    width: 40rem;
+    margin: 2rem;
+  }
+  .aboutMeArticle .aboutContainer2 p {
+    width: 80%;
+    line-height: 2;
+    text-align: center;
+    font-weight: 100;
+    background: transparent;
+  }
+  .certificate {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin: 15rem 0 10rem 0;
+  }
+  .certificate div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate div p {
+    line-height: 1.8;
+    margin: 0 0 5rem 0;
+    width: 90%;
+    font-weight: 100;
+  }
+  .certificate div p span {
+    background-image: linear-gradient(270deg, rgb(86, 0, 144) 0%, rgb(158, 1, 123) 20%, rgb(212, 1, 104) 40%, rgb(236, 67, 80) 60%, rgb(255, 124, 63) 80%, rgb(252, 175, 60) 100%);
+    background-size: cover;
+    font-weight: 300;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: none;
+  }
+  .certificate a img {
+    width: 40rem;
+    height: 57rem;
+    box-shadow: 0px 0px 20px 0px #FFFFFF;
+  }
+  .projectsRow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  html {
+    font-size: 31.25%;
+  }
+}
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+  .aboutMeArticle .aboutContainer1 {
+    background-image: url("../pics/workflow Kopie.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    animation: slide-in-right;
+    animation-duration: 1s;
+  }
+  .aboutMeArticle .aboutContainer1 p {
+    line-height: 2;
+    text-align: center;
+    font-weight: 100;
+    width: 80%;
+  }
+  .aboutMeArticle .aboutContainer1 img {
+    display: none;
+  }
+  .aboutMeArticle .aboutContainer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10rem;
+    animation: slide-in-right;
+    animation-duration: 1s;
+    background: linear-gradient(180deg, rgb(2, 2, 2) 15%, rgb(34, 32, 34) 85%);
+  }
+  .aboutMeArticle .aboutContainer2 img {
+    animation: pulsate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    width: 40rem;
+    margin: 2rem;
+  }
+  .aboutMeArticle .aboutContainer2 p {
+    width: 80%;
+    line-height: 2;
+    text-align: center;
+    font-weight: 100;
+    background: transparent;
+  }
+  .certificate {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin: 15rem 0 10rem 0;
+  }
+  .certificate div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .certificate div p {
+    line-height: 1.8;
+    margin: 0 0 5rem 0;
+    width: 90%;
+    font-weight: 100;
+  }
+  .certificate div p span {
+    background-image: linear-gradient(270deg, rgb(86, 0, 144) 0%, rgb(158, 1, 123) 20%, rgb(212, 1, 104) 40%, rgb(236, 67, 80) 60%, rgb(255, 124, 63) 80%, rgb(252, 175, 60) 100%);
+    background-size: cover;
+    font-weight: 300;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: none;
+  }
+  .certificate a img {
+    width: 40rem;
+    height: 57rem;
+    box-shadow: 0px 0px 20px 0px #FFFFFF;
   }
 }/*# sourceMappingURL=style.css.map */
