@@ -30,33 +30,41 @@ body::-webkit-scrollbar {
 @keyframes slide-in-left {
   0% {
     transform: translateX(-1000px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes slide-in-right {
   0% {
     transform: translateX(1000px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes slide-in-top {
   0% {
     transform: translateY(-1000px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes slide-in-bottom {
   0% {
     transform: translateY(1000px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes focus-in {
@@ -175,7 +183,7 @@ span {
 
 .topic {
   width: 100%;
-  margin: 0 0 10rem 10rem;
+  margin-bottom: 10rem;
   background-image: linear-gradient(270deg, rgb(86, 0, 144) 0%, rgb(158, 1, 123) 20%, rgb(212, 1, 104) 40%, rgb(236, 67, 80) 60%, rgb(255, 124, 63) 80%, rgb(252, 175, 60) 100%);
   background-size: cover;
   font-weight: 100;
@@ -276,14 +284,27 @@ header nav .linkContainer {
   margin-bottom: 20rem;
 }
 
+.slideRight {
+  animation: slide-in-right;
+  animation-duration: 1.5s;
+}
+
+.slideLeft {
+  animation: slide-in-left;
+  animation-duration: 1.5s;
+}
+
+.fade {
+  animation: focus-in;
+  animation-duration: 1s;
+}
+
 /* ABOUT ME ARTICLE */
 .aboutMeArticle .aboutContainer1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 10rem;
-  animation: slide-in-right;
-  animation-duration: 1s;
 }
 .aboutMeArticle .aboutContainer1 p {
   width: 58rem;
@@ -302,8 +323,6 @@ header nav .linkContainer {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 10rem;
-  animation: slide-in-right;
-  animation-duration: 1s;
 }
 .aboutMeArticle .aboutContainer2 img {
   animation: pulsate;
@@ -389,19 +408,22 @@ header nav .linkContainer {
   gap: 10rem;
   margin-bottom: 10rem;
 }
-.projectsWrapper .projectsRow {
+.projectsWrapper .projectsRow1,
+.projectsWrapper .projectsRow2 {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
-.projectsWrapper .projectsRow .screenshotContainer {
+.projectsWrapper .projectsRow1 .screenshotContainer,
+.projectsWrapper .projectsRow2 .screenshotContainer {
   width: 50rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.projectsWrapper .projectsRow .screenshotContainer a img {
+.projectsWrapper .projectsRow1 .screenshotContainer a img,
+.projectsWrapper .projectsRow2 .screenshotContainer a img {
   width: 100%;
 }
 

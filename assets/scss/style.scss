@@ -33,7 +33,7 @@ span {
 
 .topic {
     width: 100%;
-    margin: 0 0 10rem 10rem;
+    margin-bottom: 10rem;
     background-image: linear-gradient(270deg, rgba(86, 0, 144, 1) 0%, rgba(158, 1, 123, 1) 20%, rgba(212, 1, 104, 1) 40%, rgba(236, 67, 80, 1) 60%, rgba(255, 124, 63, 1) 80%, rgba(252, 175, 60, 1) 100%);
     background-size: cover;
     font-weight: 100;
@@ -153,6 +153,23 @@ header {
     }
 }
 
+// AOS //
+
+.slideRight {
+    animation: slide-in-right;
+    animation-duration: 1.5s;
+}
+
+.slideLeft {
+    animation: slide-in-left;
+    animation-duration: 1.5s;
+}
+
+.fade {
+    animation: focus-in;
+    animation-duration: 1s;
+}
+
 
 /* ABOUT ME ARTICLE */
 
@@ -164,8 +181,6 @@ header {
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 10rem;
-        animation: slide-in-right;
-        animation-duration: 1s;
 
         p {
             width: 58rem;
@@ -187,8 +202,6 @@ header {
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 10rem;
-        animation: slide-in-right;
-        animation-duration: 1s;
 
         img {
             animation: pulsate;
@@ -300,7 +313,8 @@ header {
     gap: 10rem;
     margin-bottom: 10rem;
 
-    .projectsRow {
+    .projectsRow1,
+    .projectsRow2 {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
@@ -416,6 +430,7 @@ footer {
         width: 100%;
         margin: 0 0 10rem 0;
     }
+
 
     .aboutMeArticle {
 
@@ -535,7 +550,7 @@ footer {
     }
 }
 
-// DESTOP //
+// DESKTOP //
 
 @media screen and (min-width: 1001px) and (max-width: 1200px) {
 
