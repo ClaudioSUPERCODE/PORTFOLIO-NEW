@@ -583,7 +583,8 @@ footer {
     height: 57rem;
     box-shadow: 0px 0px 20px 0px #FFFFFF;
   }
-  .projectsRow {
+  .projectsRow1,
+  .projectsRow2 {
     width: 100%;
     display: flex;
     flex-direction: column;
